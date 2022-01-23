@@ -1,0 +1,19 @@
+<h2>User info</h2>
+  <table ckass="table">
+    <tbody>
+      <tr>
+        <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: "jpeg" %>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td><%= user.name %></td>
+      </tr>
+      <tr>
+        <td>introduction</td>
+        <td><%= user.introduction %></td>
+      </tr>
+    </tbody>
+  </table>
+<div class="row">
+  <%= link_to "edit", edit_user_path(user) %>
+</div>
