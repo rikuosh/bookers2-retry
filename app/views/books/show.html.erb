@@ -5,7 +5,11 @@
   <table class="table">
     <tbody>
       <tr>
-        <td>user <br> name</td>
+        <td>
+        <%= link_to user_path(@book1.user) do %>
+          <%= attachment_image_tag @book1.user, :profile_image, :fill, 50, 50, format:"jpeg" %></br><%= @book1.user.name %>
+        <% end %>
+        </td>
         <td><%= @book1.title %></td>
         <td><%= @book1.body %></td>
         <% if @book1.user == current_user %>

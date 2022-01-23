@@ -8,12 +8,13 @@
     </div>
     <div class = "form-group">
         <label for = "image">Image</label>
-         <%= f.text_field :image %>
+         <%= f.attachment_field :profile_image, placeholdesr:"プロフィール" %>
     </div>
     <div class = "form-group">
       <label for = "user_introduction">Introduction</label>
       <%= f.text_field :introduction %>
     </div>
       <%= f.submit "Update User" %>
+    <% end %>
   </div>
 </div>
