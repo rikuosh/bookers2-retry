@@ -1,19 +1,5 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
-  def show
-  end
   
-  def index
-  end
-  
-  def edit 
-  end
-  
-  def update
-  end
-  
-=======
-
   def show
     @user = User.find(params[:id])
     @book = Book.new
@@ -42,6 +28,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :profile_image, :introduction)
   end
 
-
->>>>>>> 343c46cdff89e66052efb2f692c6b4896e08e375
 end
